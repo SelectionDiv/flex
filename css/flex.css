@@ -1,0 +1,7 @@
+html .box { display: flex; }
+html .box div { background: deeppink; margin: 5px; }
+html .box div:nth-child(1) { width: 400px; }
+html .box div:nth-child(2) { flex: 1; }
+html .box div:nth-child(3) { flex: 1; }
+
+/*# sourceMappingURL=flex.css.map */

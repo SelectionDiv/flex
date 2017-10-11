@@ -1,0 +1,19 @@
+html{
+    .box{
+        display: flex;
+        div{
+            background: deeppink;
+            margin:5px;
+            &:nth-child(1){
+                width: 400px;
+            }
+            &:nth-child(2){
+                flex:1
+            }
+            &:nth-child(3){
+                flex:1
+            }
+        }
+    }
+    
+}

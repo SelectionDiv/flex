@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<script src="js/hammer.js"></script>
+		<title></title>
+		<style>
+			html,body{
+				width:100%;
+				height:100%;
+				margin:0;
+				padding:0;
+				position:relative;
+			/*	overflow:hidden*/
+			}
+			ul{
+				list-style:none;
+				margin:0;
+				padding:0;
+			}
+			.uls{
+				width:100%;
+				height:100%;
+				display: flex;
+				position:absolute;
+			}
+			.uls li{
+				width:100%;
+				box-sizing: border-box;
+				border:1px solid cyan;
+				flex-shrink: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul class="uls" id="uls">
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+		
+		<script>
+			var uls = document.querySelector(".uls")
+			var lis = document.querySelectorAll("li")
+
+			console.log(lis)
+			console.log(uls)
+			
+			uls.addEventListener("touchstart",function(e){
+				//触摸屏幕时
+				e.preventDefault()
+				var Sw = e.changedTouches[0].clientX
+				var left = uls.offsetLeft
+				console.log(Sw)
+				console.log(left)
+				
+				uls.addEventListener("touchmove",function(e){
+					//拖动屏幕时
+				var dis = e.changedTouches[0].clientX - Sw
+				console.log(dis)
+				uls.style.left = left + dis +"px"
+				
+					uls.addEventListener("touchend",function(e){
+						//离开屏幕时
+						var n = 
+					})
+				})
+			})
+			
+		</script>
+	</body>
+</html>

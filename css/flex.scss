@@ -1,6 +1,8 @@
-html{
+
     .box{
         display: flex;
+        flex-flow: row nowrap;
+        flex-direction: column;
         div{
             background: deeppink;
             margin:5px;
@@ -16,4 +18,3 @@ html{
         }
     }
     
-}

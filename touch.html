@@ -24,7 +24,12 @@
 		divs.addEventListener("touchstart",function(e){
 			e.preventDefault();
 			this.innerHtml = e.changedTouches.length;
-			alert("abc")
+		})
+		divs.addEventListener("touchmove",function(e){
+			this.innerHtml = e.changedTouches.length;
+		})
+		divs.addEventListener("touchend",function(e){
+			this.innerHtml = e.changedTouches.length;
 		})
 	</script>
 </body>

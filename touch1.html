@@ -48,12 +48,13 @@
 
 			console.log(lis)
 			console.log(uls)
+			var w = uls.offsetWidth
 			
 			uls.addEventListener("touchstart",function(e){
 				//触摸屏幕时
-				e.preventDefault()
-				var Sw = e.changedTouches[0].clientX
-				var left = uls.offsetLeft
+				e.preventDefault()//阻止默认行为
+				var Sw = e.changedTouches[0].clientX //获取相对于屏幕的X值
+				var left = uls.offsetLeft//获取ul相对于页面左边的距离
 				console.log(Sw)
 				console.log(left)
 				
@@ -62,12 +63,19 @@
 				var dis = e.changedTouches[0].clientX - Sw
 				console.log(dis)
 				uls.style.left = left + dis +"px"
-				
+									
+				})
 					uls.addEventListener("touchend",function(e){
 						//离开屏幕时
-						var n = 
+						var n = Math.round(uls.offsetLeft/w)
+									
 					})
-				})
+						if(-w>=lis.length){
+							w = (lis.length-1)
+						}
+						if(w>=0){
+							w=0
+						}	
 			})
 			
 		</script>
